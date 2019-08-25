@@ -1,0 +1,31 @@
+{
+  "name": "rn-customizable-dialog",
+  "version": "1.0.0",
+  "description": "customizable alertr dialogs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "react-component",
+    "react-native-component",
+    "react",
+    "react native",
+    "mobile",
+    "ios",
+    "android",
+    "ui",
+    "stepper",
+    "progress",
+    "progress-steps"
+  ],
+  "author": "SOURAV DEY",
+  "license": "MIT",
+  "devDependencies": {
+    "metro-react-native-babel-preset": "^0.55.0"
+  },
+  "dependencies": {
+    "rn-icon-button": "^1.0.1"
+  }
+}
