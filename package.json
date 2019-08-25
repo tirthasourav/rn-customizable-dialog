@@ -1,7 +1,7 @@
 {
   "name": "rn-customizable-dialog",
-  "version": "1.0.0",
-  "description": "customizable alertr dialogs",
+  "version": "1.0.1",
+  "description": "customizable alert dialogs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,9 +16,9 @@
     "ios",
     "android",
     "ui",
-    "stepper",
-    "progress",
-    "progress-steps"
+    "Alert",
+    "ActivityIndicator",
+    "Popup Dialog"
   ],
   "author": "SOURAV DEY",
   "license": "MIT",
