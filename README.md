@@ -28,6 +28,14 @@ import { CustomDialog } from 'rn-customizable-dialog';
     iconSize={iconSize}
   />`
   
+  
+  # Screenshots
+  
+  ![ScreenShot](https://raw.github.com/tirthasourav/rn-customizable-dialog/master/src/screenshots/simple-dialog.png?v=4&s=100)
+  
+  
+  ![ScreenShot](https://raw.githubusercontent.com/tirthasourav/rn-customizable-dialog/master/src/screenshots/dialog-with-options.png)
+  
  # Properties
  
 | Prop        | Type           | default  | Required | Note  |
