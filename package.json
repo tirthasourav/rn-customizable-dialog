@@ -1,6 +1,6 @@
 {
   "name": "rn-customizable-dialog",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "customizable alert dialogs",
   "main": "index.js",
   "scripts": {

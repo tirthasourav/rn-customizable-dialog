@@ -10,7 +10,7 @@
   "dependencies": {
     "react": "16.8.6",
     "react-native": "0.60.5",
-    "rn-customizable-dialog": "file:../rn-customizable-dialog-1.0.0.tgz",
+    "rn-customizable-dialog": "file:../rn-customizable-dialog-1.0.2.tgz",
     "rn-icon-button": "^1.0.1"
   },
   "devDependencies": {

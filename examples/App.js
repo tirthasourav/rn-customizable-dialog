@@ -40,7 +40,6 @@ export default class App extends React.Component {
               <CustomDialog
                 title='DIALOG BOX !!'
                 message='Hi... I am a customizable dialog !!'
-                loading={this.state.loading}
                 action_required={this.state.action_required}
                 visible={this.state.visible}
                 onPress={()=> this.setState({ visible: false })}
@@ -54,7 +53,7 @@ export default class App extends React.Component {
                 singleButtonTitle='OK'
               />
               <CustomButton 
-                buttonStyles={{ width: 100, height: 30, borderColor: 'black', borderWidth: 1 }}
+                buttonStyles={{ width: 100, height: 30, borderColor: 'black', borderWidth: 1, alignItems: 'center', justifyContent: 'center' }}
                 title='Press Me'
                 onPress={() => this.setState({ visible: true, action_required: true  })}
               />
@@ -107,7 +106,7 @@ const styles = StyleSheet.create({
     textAlign: 'right',
   },
   buttonStyle: {
-      height: '40%',
+      height: 40,
       width: '30%',
       alignItems: 'center',
       justifyContent: 'center',
