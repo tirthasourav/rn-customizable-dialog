@@ -4,10 +4,10 @@ import React from 'react';
 import {
   View,
   Modal,
-  Text
+  Text,
+  TouchableOpacity,
+  StyleSheet
 } from 'react-native';
-import {styles} from './CustomDialogStyle';
-import { CustomButton } from 'rn-icon-button';
 
 const CustomDialog = props => {
   const {
@@ -24,8 +24,6 @@ const CustomDialog = props => {
     titleTextStyle,
     bodyTextStyle,
     singleButtonTitle,
-    icon,
-    iconSize
   } = props;
 
   return (
@@ -46,21 +44,18 @@ const CustomDialog = props => {
             <Text style={bodyTextStyle}>{message}</Text>
           </View>
           <View style={styles.dualButtonParent}>
-            <CustomButton
-              title={buttonNegativeTitle}
-              buttonStyles={buttonStyle}
-              buttonTextStyles={buttonTextStyle}
+             <TouchableOpacity
+              style={buttonStyle}
               onPress={onPress}
-              icon={icon}
-              iconSize={iconSize}
-            />
-            <CustomButton
-              title={buttonPositiveTitle}
-              buttonStyles={buttonStyle}
-              buttonTextStyles={buttonTextStyle}
-              onPress={onConfirm}icon={icon}
-              iconSize={iconSize}
-            />
+            >
+              <Text style={buttonTextStyle}>{buttonNegativeTitle}</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={buttonStyle}
+              onPress={onConfirm}
+            >
+              <Text style={buttonTextStyle}>{buttonPositiveTitle}</Text>
+            </TouchableOpacity>
           </View>
         </View>
         :
@@ -71,18 +66,84 @@ const CustomDialog = props => {
           <View style={styles.dialogBody}>
             <Text style={bodyTextStyle}>{message}</Text>
           </View>
-          <CustomButton
-            title={singleButtonTitle}
-            buttonStyles={buttonStyle}
-            buttonTextStyles={buttonTextStyle}
+          <TouchableOpacity>
+
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={buttonStyle}
             onPress={onPress}
-            icon={icon}
-            iconSize={iconSize}
-          />
+          >
+            <Text style={buttonTextStyle}>{singleButtonTitle}</Text>
+          </TouchableOpacity>
         </View>
       }
       </View>
     </Modal>
   );
 };
+
+const styles = StyleSheet.create({
+  modalBackground: {
+    flex: 1,
+    alignItems: 'center',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+  },
+  activityIndicatorWrapper: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-around'
+  },
+  dialogView: {
+    width: '75%',
+    height: '40%',
+    borderColor: '#FFFF',
+    borderWidth: 1,
+    backgroundColor: '#858585',
+    alignItems: 'center',
+    borderRadius: 15
+  },
+  dialogTitle: {
+    width: '95%',
+    height: '20%',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  dialogTitleText: {
+    fontSize: 14,
+    color: '#FFFF'
+  },
+  dialogBody: {
+    width: '95%',
+    height: '50%',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  dialogBodyText: {
+    fontSize: 14,
+    color: '#FFFF',
+    textAlign: 'center'
+  },
+  buttonStyle: {
+    height: '20%',
+    width: '45%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1,
+    borderColor: '#FFFF',
+    borderRadius: 12
+  },
+  dualButtonParent: {
+    width: '95%',
+    height: '25%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  buttonText: {
+    fontSize: 14,
+    color: '#FFFF'
+  }
+});
+
 export default CustomDialog;

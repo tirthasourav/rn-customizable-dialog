@@ -24,8 +24,6 @@ import { CustomDialog } from 'rn-customizable-dialog';
     buttonTextStyle={styles.buttonText}
     bodyTextStyle={styles.dialogBodyText}
     singleButtonTitle='OK'
-    icon={icon}
-    iconSize={iconSize}
   />`
   
   
@@ -53,5 +51,3 @@ import { CustomDialog } from 'rn-customizable-dialog';
 | buttonTextStyle     | object | NA |Optional|See example
 | bodyTextStyle     | object | NA |Optional|See example
 | singleButtonTitle     | object | NA |Optional|See example, use when action_required is false
-| icon     | image | NA |Optional|Use image to your buttons with or without text(button titles)
-| iconSize     | number | NA |Optional|use this to make the icon fit with your buttons
